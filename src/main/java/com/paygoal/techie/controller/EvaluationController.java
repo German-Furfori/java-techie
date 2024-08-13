@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequiredArgsConstructor
 public class EvaluationController {
@@ -14,7 +16,7 @@ public class EvaluationController {
     private final EvaluationService evaluationService;
 
     @PostMapping("/evaluate")
-    public String evaluate(@RequestBody DataRequestDto data) {
+    public String evaluate(@RequestBody @Valid DataRequestDto data) {
         return evaluationService.evaluate(data);
     }
 

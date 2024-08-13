@@ -12,7 +12,7 @@ public class EvaluationServiceImpl implements EvaluationService {
     @Override
     public String evaluate(DataRequestDto data) {
         //TODO logic
-        return null;
+        return "All attributes are ok";
     }
 
 }
