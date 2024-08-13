@@ -17,9 +17,9 @@ public class EvaluationControllerTest extends TechieApplicationTests {
 
     private static Stream<Arguments> provideDataForTests() {
         return Stream.of(
-                Arguments.of("request_1.json", "Cannot receive this String"),
-                Arguments.of("request_2.json", "Cannot receive this Integer"),
-                Arguments.of("request_3.json", "Cannot receive this List"),
+                Arguments.of("request_1.json", "This String contains more than 5 s"),
+                Arguments.of("request_2.json", "This Integer is not multiple of 10"),
+                Arguments.of("request_3.json", "This List contains more than 5 registers"),
                 Arguments.of("request_4.json", "All attributes are ok")
         );
     }
