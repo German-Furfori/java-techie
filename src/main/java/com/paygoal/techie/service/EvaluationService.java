@@ -1,9 +1,9 @@
 package com.paygoal.techie.service;
 
-import com.paygoal.techie.dto.DataDto;
+import com.paygoal.techie.dto.DataRequestDto;
 
 public interface EvaluationService {
 
-    DataDto evaluate(DataDto data);
+    String evaluate(DataRequestDto data);
 
 }

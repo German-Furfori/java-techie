@@ -1,4 +1,5 @@
 {
   "stringToEvaluate": "Hello",
-  "integerToEvaluate": 107
+  "integerToEvaluate": 100,
+  "listToEvaluate": [1, 2]
 }

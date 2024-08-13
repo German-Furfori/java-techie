@@ -1,6 +1,6 @@
 package com.paygoal.techie.controller;
 
-import com.paygoal.techie.dto.DataDto;
+import com.paygoal.techie.dto.DataRequestDto;
 import com.paygoal.techie.service.EvaluationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +14,7 @@ public class EvaluationController {
     private final EvaluationService evaluationService;
 
     @PostMapping("/evaluate")
-    public DataDto evaluate(@RequestBody DataDto data) {
+    public String evaluate(@RequestBody DataRequestDto data) {
         return evaluationService.evaluate(data);
     }
 

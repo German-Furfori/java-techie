@@ -1,6 +1,6 @@
 package com.paygoal.techie.service.impl;
 
-import com.paygoal.techie.dto.DataDto;
+import com.paygoal.techie.dto.DataRequestDto;
 import com.paygoal.techie.service.EvaluationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class EvaluationServiceImpl implements EvaluationService {
 
     @Override
-    public DataDto evaluate(DataDto data) {
+    public String evaluate(DataRequestDto data) {
         //TODO logic
         return null;
     }

@@ -1,4 +1,5 @@
 {
-  "stringToEvaluate": "Another string testing",
-  "integerToEvaluate": 11
+  "stringToEvaluate": "This is a string test",
+  "integerToEvaluate": 11,
+  "listToEvaluate": [1, 2, 3]
 }

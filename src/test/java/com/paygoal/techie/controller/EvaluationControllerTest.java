@@ -17,27 +17,25 @@ public class EvaluationControllerTest extends TechieApplicationTests {
 
     private static Stream<Arguments> provideDataForTests() {
         return Stream.of(
-                Arguments.of("request_1.json", "Thi i a tring tet", 4),
-                Arguments.of("request_2.json", "Another tring teting", 61),
-                Arguments.of("request_3.json", "Yez, thiz ztring tezt containz more than 5 z", 25),
-                Arguments.of("request_4.json", "Hello", 5350)
+                Arguments.of("request_1.json", "Cannot receive this String"),
+                Arguments.of("request_2.json", "Cannot receive this Integer"),
+                Arguments.of("request_3.json", "Cannot receive this List"),
+                Arguments.of("request_4.json", "All attributes are ok")
         );
     }
 
     @ParameterizedTest
     @MethodSource("provideDataForTests")
     @SneakyThrows
-    public void evaluation_withGroupOfData_evaluateResponse(String file, String stringResult, Integer integerResult) {
+    public void evaluation_withGroupOfData_evaluateResponse(String file, String response) {
         String body = getContentFromFile(file);
 
         mockMvc.perform(post("/evaluate")
                         .content(body)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.stringToEvaluate").exists())
-                .andExpect(jsonPath("$.integerToEvaluate").exists())
-                .andExpect(jsonPath("$.stringToEvaluate").value(stringResult))
-                .andExpect(jsonPath("$.integerToEvaluate").value(integerResult));
+                .andExpect(jsonPath("$.response").exists())
+                .andExpect(jsonPath("$.response").value(response));
 
     }
 
