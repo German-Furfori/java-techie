@@ -9,13 +9,13 @@ import java.util.List;
 @Data
 public class DataRequestDto {
 
-    @StringValidator(message = "Cannot receive this String")
+    @StringValidator(message = "This String contains more than 5 s")
     private String stringToEvaluate;
 
-    @IntegerValidator(message = "Cannot receive this Integer")
+    @IntegerValidator(message = "This Integer is not multiple of 10")
     private Integer integerToEvaluate;
 
-    @ListValidator(message = "Cannot receive this List")
+    @ListValidator(message = "This List contains more than 5 registers")
     private List<?> listToEvaluate;
 
 }
