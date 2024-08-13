@@ -1,5 +1,5 @@
 {
   "stringToEvaluate": "Yes, this string test contains more than 5 s",
-  "integerToEvaluate": 4,
+  "integerToEvaluate": 40,
   "listToEvaluate": [1, 2]
 }

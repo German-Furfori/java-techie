@@ -34,8 +34,8 @@ public class EvaluationControllerTest extends TechieApplicationTests {
                         .content(body)
                         .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.response").exists())
-                .andExpect(jsonPath("$.response").value(response));
+                .andExpect(jsonPath("$").exists())
+                .andExpect(jsonPath("$").value(response));
 
     }
 
